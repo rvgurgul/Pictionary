@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F3DB56C1DF740C50024568F /* DrawingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DB56B1DF740C50024568F /* DrawingPanel.swift */; };
+		3F3DB56E1DF851A70024568F /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DB56D1DF851A70024568F /* Drawing.swift */; };
+		3F3DB5701DF8571A0024568F /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DB56F1DF8571A0024568F /* ColorPicker.swift */; };
+		3F3DB5721DF85B640024568F /* ColorPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DB5711DF85B640024568F /* ColorPickerDelegate.swift */; };
+		3F3DB5741DF991460024568F /* SizeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DB5731DF991460024568F /* SizeSlider.swift */; };
 		3F5975FE1DF70E5C001E948F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5975FD1DF70E5C001E948F /* AppDelegate.swift */; };
 		3F5976001DF70E5C001E948F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5975FF1DF70E5C001E948F /* ViewController.swift */; };
 		3F5976031DF70E5C001E948F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5976011DF70E5C001E948F /* Main.storyboard */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F3DB56B1DF740C50024568F /* DrawingPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingPanel.swift; sourceTree = "<group>"; };
+		3F3DB56D1DF851A70024568F /* Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
+		3F3DB56F1DF8571A0024568F /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		3F3DB5711DF85B640024568F /* ColorPickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerDelegate.swift; sourceTree = "<group>"; };
+		3F3DB5731DF991460024568F /* SizeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeSlider.swift; sourceTree = "<group>"; };
 		3F5975FA1DF70E5C001E948F /* Pictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5975FD1DF70E5C001E948F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F5975FF1DF70E5C001E948F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,10 +107,15 @@
 		3F5975FC1DF70E5C001E948F /* Pictionary */ = {
 			isa = PBXGroup;
 			children = (
+				3F5976041DF70E5C001E948F /* Assets.xcassets */,
 				3F5975FD1DF70E5C001E948F /* AppDelegate.swift */,
+				3F3DB5711DF85B640024568F /* ColorPickerDelegate.swift */,
+				3F3DB56F1DF8571A0024568F /* ColorPicker.swift */,
+				3F3DB5731DF991460024568F /* SizeSlider.swift */,
+				3F3DB56B1DF740C50024568F /* DrawingPanel.swift */,
+				3F3DB56D1DF851A70024568F /* Drawing.swift */,
 				3F5975FF1DF70E5C001E948F /* ViewController.swift */,
 				3F5976011DF70E5C001E948F /* Main.storyboard */,
-				3F5976041DF70E5C001E948F /* Assets.xcassets */,
 				3F5976061DF70E5C001E948F /* LaunchScreen.storyboard */,
 				3F5976091DF70E5C001E948F /* Info.plist */,
 			);
@@ -259,6 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3DB5741DF991460024568F /* SizeSlider.swift in Sources */,
+				3F3DB5721DF85B640024568F /* ColorPickerDelegate.swift in Sources */,
+				3F3DB56E1DF851A70024568F /* Drawing.swift in Sources */,
+				3F3DB56C1DF740C50024568F /* DrawingPanel.swift in Sources */,
+				3F3DB5701DF8571A0024568F /* ColorPicker.swift in Sources */,
 				3F5976001DF70E5C001E948F /* ViewController.swift in Sources */,
 				3F5975FE1DF70E5C001E948F /* AppDelegate.swift in Sources */,
 			);
@@ -505,6 +525,7 @@
 				3F5976241DF70E5C001E948F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F5976251DF70E5C001E948F /* Build configuration list for PBXNativeTarget "PictionaryTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +534,7 @@
 				3F5976271DF70E5C001E948F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F5976281DF70E5C001E948F /* Build configuration list for PBXNativeTarget "PictionaryUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +543,7 @@
 				3F59762A1DF70E5C001E948F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
