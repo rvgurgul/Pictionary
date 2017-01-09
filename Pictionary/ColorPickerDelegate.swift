@@ -11,5 +11,6 @@ import UIKit
 
 protocol ColorPickerDelegate
 {
+    var color: CIColor {get}
     func returnFromColorPicker(_ color: UIColor)
 }

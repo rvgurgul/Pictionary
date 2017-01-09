@@ -12,10 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var drawings: [Drawing]!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        load()
         return true
     }
 
@@ -40,7 +42,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    /*SAVING AND LOADING DRAWINGS*/
+    
+    var filePath: String{
+        let manager = FileManager.default
+        let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first! as URL
+        return url.appendingPathComponent("savedData").path
+    }
 
-
+    func load(){
+        if let data = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? [Drawing]{
+            drawings = data
+        }
+        else{
+            drawings = [Drawing]()
+        }
+    }
+    
+    func save(_ d: Drawing){
+        drawings.append(d)
+        NSKeyedArchiver.archiveRootObject(drawings, toFile: filePath)
+    }
 }
-

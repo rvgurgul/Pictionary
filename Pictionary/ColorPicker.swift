@@ -20,6 +20,8 @@ class ColorPicker: UIViewController
     
     var sender: ColorPickerDelegate!
     var color = UIColor.black
+    
+    //Using a tuple, the color updates are easier to recognize and update things to reflect changes
     var rgb: (Float, Float, Float) = (0.0, 0.0, 0.0)
     {
         didSet
@@ -37,9 +39,20 @@ class ColorPicker: UIViewController
         super.viewDidLoad()
         guard sender != nil else
         {
-            self.dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
             return
         }
+        
+        let input: CIColor = sender.color
+        let r = Float(input.red)
+        let g = Float(input.green)
+        let b = Float(input.blue)
+        rgb = (r, g, b)
+        rSlider.value = r
+        gSlider.value = g
+        bSlider.value = b
+        
+        //Makes the button circular
         doneButton.layer.cornerRadius = 25
     }
     

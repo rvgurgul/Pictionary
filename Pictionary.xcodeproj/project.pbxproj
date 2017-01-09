@@ -19,6 +19,8 @@
 		3F5976081DF70E5C001E948F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5976061DF70E5C001E948F /* LaunchScreen.storyboard */; };
 		3F5976131DF70E5C001E948F /* PictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5976121DF70E5C001E948F /* PictionaryTests.swift */; };
 		3F59761E1DF70E5C001E948F /* PictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59761D1DF70E5C001E948F /* PictionaryUITests.swift */; };
+		3F765DFA1DF9B99F00F68377 /* SizeSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F765DF91DF9B99F00F68377 /* SizeSliderDelegate.swift */; };
+		3FCC721E1E03109500A5FD67 /* GuessingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC721D1E03109500A5FD67 /* GuessingPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		3F5976191DF70E5C001E948F /* PictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F59761D1DF70E5C001E948F /* PictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictionaryUITests.swift; sourceTree = "<group>"; };
 		3F59761F1DF70E5C001E948F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F765DF91DF9B99F00F68377 /* SizeSliderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeSliderDelegate.swift; sourceTree = "<group>"; };
+		3FCC721D1E03109500A5FD67 /* GuessingPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessingPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +115,11 @@
 				3F5975FD1DF70E5C001E948F /* AppDelegate.swift */,
 				3F3DB5711DF85B640024568F /* ColorPickerDelegate.swift */,
 				3F3DB56F1DF8571A0024568F /* ColorPicker.swift */,
-				3F3DB5731DF991460024568F /* SizeSlider.swift */,
 				3F3DB56B1DF740C50024568F /* DrawingPanel.swift */,
 				3F3DB56D1DF851A70024568F /* Drawing.swift */,
+				3FCC721D1E03109500A5FD67 /* GuessingPanel.swift */,
+				3F765DF91DF9B99F00F68377 /* SizeSliderDelegate.swift */,
+				3F3DB5731DF991460024568F /* SizeSlider.swift */,
 				3F5975FF1DF70E5C001E948F /* ViewController.swift */,
 				3F5976011DF70E5C001E948F /* Main.storyboard */,
 				3F5976061DF70E5C001E948F /* LaunchScreen.storyboard */,
@@ -278,8 +284,10 @@
 				3F3DB5721DF85B640024568F /* ColorPickerDelegate.swift in Sources */,
 				3F3DB56E1DF851A70024568F /* Drawing.swift in Sources */,
 				3F3DB56C1DF740C50024568F /* DrawingPanel.swift in Sources */,
+				3F765DFA1DF9B99F00F68377 /* SizeSliderDelegate.swift in Sources */,
 				3F3DB5701DF8571A0024568F /* ColorPicker.swift in Sources */,
 				3F5976001DF70E5C001E948F /* ViewController.swift in Sources */,
+				3FCC721E1E03109500A5FD67 /* GuessingPanel.swift in Sources */,
 				3F5975FE1DF70E5C001E948F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

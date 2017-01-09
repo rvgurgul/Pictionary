@@ -9,13 +9,30 @@
 import Foundation
 import UIKit
 
-class Drawing
+class Drawing: NSObject, NSCoding
 {
-    var drawing: UIView!
+    var view: UIView!
     var name: String!
     
     init(_ name: String)
     {
         self.name = name
+    }
+    
+    override init()
+    {
+        self.name = ""
+    }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        view = aDecoder.decodeObject(forKey: "view") as! UIView
+        name = aDecoder.decodeObject(forKey: "name") as! String
+    }
+    
+    func encode(with aCoder: NSCoder)
+    {
+        aCoder.encode(view, forKey: "view")
+        aCoder.encode(name, forKey: "name")
     }
 }

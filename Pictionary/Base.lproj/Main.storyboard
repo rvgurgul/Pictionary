@@ -18,39 +18,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fhO-UV-qg4">
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="375" id="UBM-jG-kqZ"/>
-                                    <constraint firstAttribute="width" constant="375" id="egd-gg-ZB7"/>
-                                </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="How to play" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xIF-dN-JHk">
-                                <frame key="frameInset" minY="447" width="375" height="220"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to PICTIONARY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMo-VO-dXr">
+                                <frame key="frameInset" minX="8" minY="72" width="359" height="174"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIF-dN-JHk">
+                                <frame key="frameInset" minX="8" minY="254" width="359" height="405"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="Olb-GI-TC2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <string key="text">The objective of the game is to have your friend(s) guess the correct word or phrase that you have created a drawing for! When you press play, you will have to enter a phrase and then you will have 60 seconds to draw it. After that, pass your phone to a friend and have them guess what your masterpiece is.</string>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fhO-UV-qg4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2EG-mY-kS5"/>
-                            <constraint firstItem="fhO-UV-qg4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3bT-64-9KY"/>
-                            <constraint firstItem="fhO-UV-qg4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FzO-Xf-2cF"/>
+                            <constraint firstAttribute="trailing" secondItem="OMo-VO-dXr" secondAttribute="trailing" constant="8" id="6RR-C6-srV"/>
+                            <constraint firstItem="xIF-dN-JHk" firstAttribute="top" secondItem="OMo-VO-dXr" secondAttribute="bottom" constant="8" id="Cic-ew-wYg"/>
+                            <constraint firstItem="xIF-dN-JHk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="E50-pj-QLP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xIF-dN-JHk" secondAttribute="bottom" id="K7N-gG-SyN"/>
+                            <constraint firstItem="OMo-VO-dXr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="MSg-cp-78S"/>
+                            <constraint firstItem="OMo-VO-dXr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="NiC-5z-KOh"/>
                             <constraint firstItem="xIF-dN-JHk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XFp-za-8uR"/>
-                            <constraint firstItem="xIF-dN-JHk" firstAttribute="top" secondItem="fhO-UV-qg4" secondAttribute="bottom" id="Xc0-vo-Sms"/>
-                            <constraint firstAttribute="trailing" secondItem="fhO-UV-qg4" secondAttribute="trailing" id="aqU-Vh-4Oy"/>
+                            <constraint firstAttribute="trailing" secondItem="xIF-dN-JHk" secondAttribute="trailing" constant="8" id="ZBK-rU-uA6"/>
                             <constraint firstAttribute="trailing" secondItem="xIF-dN-JHk" secondAttribute="trailing" id="dZP-Je-odq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xIF-dN-JHk" secondAttribute="bottom" constant="8" id="fCP-4X-VGJ"/>
                             <constraint firstItem="xIF-dN-JHk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zOk-iS-blC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GdI-MG-1yh">
-                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="ZuQ-um-Nco"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="ZuQ-um-Nco">
+                            <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="drawingArchives:" destination="BYZ-38-t0r" id="QZd-1D-WI7"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="play" id="XSS-uw-paX">
+                            <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="6CO-2g-frT" kind="presentation" identifier="toDrawingPanel" id="gMD-vz-s9o"/>
                             </connections>
@@ -172,32 +180,57 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                             </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="6zc-Sb-4Eu">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="JCb-iF-5mC"/>
+                                    <constraint firstAttribute="width" constant="375" id="gKH-bK-N6C"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ER-1a-jIQ">
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="w5x-rG-h6b"/>
                                 </constraints>
                                 <items/>
+                                <color key="barTintColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-hI-ZLp">
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Drawing" prompt="You are drawing:" id="BoU-xQ-B1A">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="L9G-eb-Pcd">
+                                            <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="toolsButton:" destination="6CO-2g-frT" id="3Mk-BU-Ruf"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="jhC-Or-QQg"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="jhC-Or-QQg">
+                                            <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="doneButton:" destination="6CO-2g-frT" id="VcO-pj-JEt"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6zc-Sb-4Eu" firstAttribute="leading" secondItem="xm1-af-Wlm" secondAttribute="leading" id="8c7-5p-6Ev"/>
                             <constraint firstItem="pIQ-aJ-L0p" firstAttribute="top" secondItem="3ER-1a-jIQ" secondAttribute="bottom" id="Cml-Z1-DXG"/>
+                            <constraint firstItem="6zc-Sb-4Eu" firstAttribute="top" secondItem="0l7-hI-ZLp" secondAttribute="bottom" id="Een-HN-Gcg"/>
                             <constraint firstItem="3ER-1a-jIQ" firstAttribute="centerX" secondItem="xm1-af-Wlm" secondAttribute="centerX" id="RtG-9G-27S"/>
                             <constraint firstItem="0l7-hI-ZLp" firstAttribute="leading" secondItem="xm1-af-Wlm" secondAttribute="leading" id="TRH-Tn-f09"/>
                             <constraint firstItem="0l7-hI-ZLp" firstAttribute="top" secondItem="xm1-af-Wlm" secondAttribute="top" id="VBl-1E-fl7"/>
                             <constraint firstAttribute="trailing" secondItem="0l7-hI-ZLp" secondAttribute="trailing" id="eWN-oh-qsV"/>
+                            <constraint firstAttribute="trailing" secondItem="6zc-Sb-4Eu" secondAttribute="trailing" id="fQv-4R-p0T"/>
+                            <constraint firstItem="6zc-Sb-4Eu" firstAttribute="centerX" secondItem="xm1-af-Wlm" secondAttribute="centerX" id="ouJ-Do-nLF"/>
                             <constraint firstAttribute="trailing" secondItem="3ER-1a-jIQ" secondAttribute="trailing" id="p8S-6q-oku"/>
                             <constraint firstItem="3ER-1a-jIQ" firstAttribute="leading" secondItem="xm1-af-Wlm" secondAttribute="leading" id="zd7-ZO-800"/>
                         </constraints>
@@ -214,16 +247,92 @@
                         <outlet property="botBar" destination="3ER-1a-jIQ" id="v9u-04-gLL"/>
                         <outlet property="navBar" destination="BoU-xQ-B1A" id="UBm-p0-zNu"/>
                         <outlet property="panel" destination="MDC-RA-kyV" id="QsS-PQ-d9X"/>
+                        <outlet property="timeRemaining" destination="6zc-Sb-4Eu" id="98v-Zg-kYM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mv-FB-Vtd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1908" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Guessing Panel-->
+        <scene sceneID="ilj-WN-JuY">
+            <objects>
+                <viewController storyboardIdentifier="GuessingPanel" id="tRZ-ao-7un" customClass="GuessingPanel" customModule="Pictionary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6eY-kp-Yqc"/>
+                        <viewControllerLayoutGuide type="bottom" id="DAJ-SW-6Cd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JaB-qy-hkC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Smn-2E-uX3">
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="9Vn-PM-1Fq"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " prompt="The word is:" id="k6F-ab-c3d"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s52-ie-DN8">
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="wA2-XO-5De"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pO6-fI-FUz"/>
+                                    <barButtonItem systemItem="compose" id="5PR-IJ-q8o">
+                                        <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="guessButton:" destination="tRZ-ao-7un" id="D5b-2P-xqi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QOf-74-x7y"/>
+                                </items>
+                                <color key="barTintColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="719-Rj-n1Y">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="7rR-Vj-v4t"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DAJ-SW-6Cd" firstAttribute="top" secondItem="s52-ie-DN8" secondAttribute="bottom" id="0U2-ac-T1S"/>
+                            <constraint firstAttribute="trailing" secondItem="s52-ie-DN8" secondAttribute="trailing" id="4CQ-Eo-U7Q"/>
+                            <constraint firstItem="719-Rj-n1Y" firstAttribute="leading" secondItem="JaB-qy-hkC" secondAttribute="leading" id="5WN-L8-9Kd"/>
+                            <constraint firstItem="Smn-2E-uX3" firstAttribute="top" secondItem="JaB-qy-hkC" secondAttribute="top" id="5sI-V8-Dn1"/>
+                            <constraint firstItem="s52-ie-DN8" firstAttribute="centerX" secondItem="JaB-qy-hkC" secondAttribute="centerX" id="Eqq-GV-FNt"/>
+                            <constraint firstItem="719-Rj-n1Y" firstAttribute="centerX" secondItem="JaB-qy-hkC" secondAttribute="centerX" id="KfB-fF-Syn"/>
+                            <constraint firstItem="719-Rj-n1Y" firstAttribute="top" secondItem="Smn-2E-uX3" secondAttribute="bottom" id="cNG-eM-fgW"/>
+                            <constraint firstItem="Smn-2E-uX3" firstAttribute="leading" secondItem="JaB-qy-hkC" secondAttribute="leading" id="feC-0C-ofG"/>
+                            <constraint firstAttribute="trailing" secondItem="Smn-2E-uX3" secondAttribute="trailing" id="gKk-Rb-p65"/>
+                            <constraint firstAttribute="trailing" secondItem="719-Rj-n1Y" secondAttribute="trailing" id="jRq-e1-8s9"/>
+                            <constraint firstItem="Smn-2E-uX3" firstAttribute="centerX" secondItem="JaB-qy-hkC" secondAttribute="centerX" id="pSs-5u-p4n"/>
+                            <constraint firstItem="s52-ie-DN8" firstAttribute="leading" secondItem="JaB-qy-hkC" secondAttribute="leading" id="zFF-ts-B6g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navBar" destination="k6F-ab-c3d" id="fxx-If-wTj"/>
+                        <outlet property="timeRemaining" destination="719-Rj-n1Y" id="Zpl-gz-0vh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvR-OS-2YH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2781.5999999999999" y="138.98050974512745"/>
+        </scene>
+        <!--Size Slider-->
         <scene sceneID="l66-7F-6gR">
             <objects>
-                <viewController id="1eK-0D-v3Y" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SizeSlider" id="1eK-0D-v3Y" customClass="SizeSlider" customModule="Pictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NZ6-mO-4TU"/>
                         <viewControllerLayoutGuide type="bottom" id="kkb-Ru-1Aw"/>
@@ -236,29 +345,24 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fub-vI-pNq">
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="vl7-UY-SK9"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Lfr-4f-Lou"/>
-                                    <barButtonItem style="plain" id="VJy-zn-G1V">
-                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="50" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="OZW-kJ-M9L">
-                                            <rect key="frame" x="22" y="7" width="97" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3gG-df-7DB"/>
                                     <barButtonItem style="plain" id="PWP-i7-Bhe">
                                         <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="25" maxValue="75" id="OMI-UF-ndd">
-                                            <rect key="frame" x="129" y="7" width="224" height="31"/>
+                                            <rect key="frame" x="37" y="7" width="300" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="numSliderValueChanged:" destination="1eK-0D-v3Y" eventType="valueChanged" id="ICb-Zk-TN6"/>
+                                            </connections>
                                         </slider>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kdo-hZ-bFN"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rzo-YM-G4y"/>
                                 </items>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
                         <constraints>
@@ -274,6 +378,9 @@
                             <constraint firstAttribute="trailing" secondItem="Fub-vI-pNq" secondAttribute="trailing" id="vRk-tc-4At"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numSlider" destination="OMI-UF-ndd" id="5yl-4h-WVK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="689-d6-5jt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -287,6 +394,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7IH-EH-qs9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
